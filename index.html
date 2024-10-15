@@ -746,10 +746,10 @@
                                     <div class="questionNumber">Frage 3/3:</div>
                                     <p class="quest">Bist du bereit, sogar bis zu 30.000 Franken pro Monat zu verdienen,
                                         und weißt du bereits, wie du dieses Geld nutzen wirst?</p>
-                                    <a href="" style="cursor: pointer;">
+                                    <a style="cursor: pointer;">
                                         <button id="question3_yes">Ja</button>
                                     </a>
-                                    <a href="" style="cursor: pointer;">
+                                    <a style="cursor: pointer;">
                                         <button id="question3_no">Nein</button>
                                     </a>
                                 </div>
@@ -2547,6 +2547,36 @@
             </div>
         </div>
     </div>
+
+    <script>
+        /*Question 1*/
+        jQuery("#question1_yes").click(function () {
+            jQuery("#question1").fadeOut(500);
+            jQuery("#question2").delay(500).fadeIn(500);
+        });
+        jQuery("#question1_no").click(function () {
+            jQuery("#question1").fadeOut(500);
+            jQuery("#question2").delay(500).fadeIn(500);
+        });
+
+        /*Question 2*/
+        jQuery("#question2_yes").click(function () {
+            jQuery("#question2").fadeOut(500);
+            jQuery("#question3").delay(500).fadeIn(500);
+        });
+        jQuery("#question2_no").click(function () {
+            jQuery("#question2").fadeOut(500);
+            jQuery("#question3").delay(500).fadeIn(500);
+        });
+        jQuery("#question3_yes").click(function () {
+            jQuery("#popup_form").addClass("d-flex");
+        });
+        jQuery("#question3_no").click(function () {
+            jQuery("#popup_form").addClass("d-flex");
+        });
+
+    </script>
+
     <script>
         const btn_popup = document.querySelector(".btn--animate-grow");
         btn_popup.addEventListener('click', (e) => {
